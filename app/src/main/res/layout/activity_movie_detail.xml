@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".streming.MDActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/detail_movie_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="245dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/model" />
+
+        <ImageView
+            android:id="@+id/grad_detail_movie_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_movie_cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/detail_movie_cover"
+            app:layout_constraintTop_toTopOf="@+id/detail_movie_cover"
+            app:srcCompat="@drawable/gradient_bg" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/play_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:backgroundTint="#D6EA2910"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_movie_cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/detail_movie_cover"
+            app:layout_constraintTop_toTopOf="@+id/detail_movie_cover"
+            app:srcCompat="@drawable/play" />
+
+        <ImageView
+            android:id="@+id/detail_movie_img"
+            android:layout_width="125dp"
+            android:layout_height="175dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:scaleType="centerCrop"
+            android:transitionName="sName"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_movie_cover"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_movie_cover"
+            app:layout_constraintVertical_bias="0.42"
+            app:srcCompat="@drawable/avengers" />
+
+        <TextView
+            android:id="@+id/detail_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="TextView"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/detail_movie_img"
+            app:layout_constraintTop_toBottomOf="@+id/detail_movie_cover" />
+
+        <TextView
+            android:id="@+id/detail_movie_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/simple_text"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_movie_img" />
+
+        <TextView
+            android:id="@+id/detail_movie_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Ação, Ficção Científica, Herói"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toEndOf="@+id/detail_movie_img"
+            app:layout_constraintTop_toBottomOf="@+id/grad_detail_movie_cover" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
